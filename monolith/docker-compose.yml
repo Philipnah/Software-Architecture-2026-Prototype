@@ -1,0 +1,13 @@
+services:
+  monolith:
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    container_name: monolith
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - PURCHASE_DELAY_SECONDS=0.15
+      - DOWNLOAD_DELAY_SECONDS=0.15
+      - ANALYTICS_DELAY_SECONDS=0.2

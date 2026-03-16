@@ -1,0 +1,38 @@
+services:
+  purchase_service:
+    build:
+      context: .
+      dockerfile: services/purchase_service/Dockerfile
+    container_name: purchase_service
+    ports:
+      - "8001:8001"
+    environment:
+      - PORT=8001
+      - SERVICE_DELAY_SECONDS=0.15
+
+  download_service:
+    build:
+      context: .
+      dockerfile: services/download_service/Dockerfile
+    container_name: download_service
+    ports:
+      - "8002:8002"
+    environment:
+      - PORT=8002
+      - SERVICE_DELAY_SECONDS=0.15
+
+  analytics_service:
+    build:
+      context: .
+      dockerfile: services/analytics_service/Dockerfile
+    container_name: analytics_service
+    ports:
+      - "8003:8003"
+    environment:
+      - PORT=8003
+      - SERVICE_DELAY_SECONDS=0.2
+      - PURCHASE_STATS_URL=http://purchase_service:8001/stats
+      - DOWNLOAD_STATS_URL=http://download_service:8002/stats
+    depends_on:
+      - purchase_service
+      - download_service

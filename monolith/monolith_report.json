@@ -1,0 +1,30 @@
+{
+  "scenario": "monolith_restart",
+  "duration_seconds": 45.46,
+  "totals": {
+    "attempted": 1156,
+    "succeeded": 1138,
+    "failed": 18,
+    "lost_ratio": 0.0156
+  },
+  "per_endpoint": {
+    "purchase": {
+      "attempted": 486,
+      "succeeded": 477,
+      "failed": 9,
+      "lost_ratio": 0.0185
+    },
+    "download": {
+      "attempted": 437,
+      "succeeded": 432,
+      "failed": 5,
+      "lost_ratio": 0.0114
+    },
+    "analytics": {
+      "attempted": 233,
+      "succeeded": 229,
+      "failed": 4,
+      "lost_ratio": 0.0172
+    }
+  }
+}
