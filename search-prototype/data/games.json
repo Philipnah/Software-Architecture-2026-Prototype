@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Skyforge Arena",
+    "genre": "RPG",
+    "tags": ["fantasy", "co-op", "loot"],
+    "description": "Party-based fantasy RPG with seasonal dungeons.",
+    "price": 39.99,
+    "discount": 10.0
+  },
+  {
+    "id": 2,
+    "title": "Neon Drift",
+    "genre": "Racing",
+    "tags": ["arcade", "multiplayer", "synthwave"],
+    "description": "Arcade street racing with online tournaments.",
+    "price": 24.99,
+    "discount": 0.0
+  },
+  {
+    "id": 3,
+    "title": "Orbital Tactics",
+    "genre": "Strategy",
+    "tags": ["turn-based", "space", "singleplayer"],
+    "description": "Turn-based fleet combat in deep space.",
+    "price": 29.99,
+    "discount": 15.0
+  },
+  {
+    "id": 4,
+    "title": "Crypts of Eldoria",
+    "genre": "RPG",
+    "tags": ["dungeon", "roguelite", "dark-fantasy"],
+    "description": "Procedural dungeon crawler with permadeath mechanics.",
+    "price": 34.99,
+    "discount": 5.0
+  },
+  {
+    "id": 5,
+    "title": "Pixel Farm Town",
+    "genre": "Simulation",
+    "tags": ["farming", "casual", "crafting"],
+    "description": "Relaxed farm sim with local co-op and seasons.",
+    "price": 19.99,
+    "discount": 20.0
+  },
+  {
+    "id": 6,
+    "title": "Abyss Raiders",
+    "genre": "Action",
+    "tags": ["hack-and-slash", "co-op", "bosses"],
+    "description": "Fast-paced action game featuring raid bosses.",
+    "price": 44.99,
+    "discount": 0.0
+  },
+  {
+    "id": 7,
+    "title": "Kingdom Ledger",
+    "genre": "Strategy",
+    "tags": ["city-builder", "economy", "medieval"],
+    "description": "Build and optimize a medieval trade kingdom.",
+    "price": 31.99,
+    "discount": 12.0
+  },
+  {
+    "id": 8,
+    "title": "Mystic Vale Online",
+    "genre": "RPG",
+    "tags": ["mmorpg", "open-world", "guilds"],
+    "description": "Large-scale online RPG with guild wars.",
+    "price": 49.99,
+    "discount": 0.0
+  },
+  {
+    "id": 9,
+    "title": "Steel Horizon",
+    "genre": "Shooter",
+    "tags": ["fps", "multiplayer", "competitive"],
+    "description": "Competitive arena shooter with class loadouts.",
+    "price": 27.99,
+    "discount": 8.0
+  },
+  {
+    "id": 10,
+    "title": "Dreamline Stories",
+    "genre": "Adventure",
+    "tags": ["narrative", "singleplayer", "puzzle"],
+    "description": "Narrative puzzle adventure across dream worlds.",
+    "price": 21.99,
+    "discount": 0.0
+  },
+  {
+    "id": 11,
+    "title": "Shadow Protocol",
+    "genre": "Stealth",
+    "tags": ["tactical", "singleplayer", "espionage"],
+    "description": "Stealth espionage missions with branching outcomes.",
+    "price": 33.99,
+    "discount": 25.0
+  },
+  {
+    "id": 12,
+    "title": "Runebreakers",
+    "genre": "RPG",
+    "tags": ["action-rpg", "loot", "multiplayer"],
+    "description": "Action RPG focused on rune crafting and loot hunts.",
+    "price": 36.99,
+    "discount": 0.0
+  },
+  {
+    "id": 13,
+    "title": "Tiny Mechs",
+    "genre": "Action",
+    "tags": ["mechs", "local-coop", "arcade"],
+    "description": "Arcade mech brawler for short co-op sessions.",
+    "price": 14.99,
+    "discount": 30.0
+  },
+  {
+    "id": 14,
+    "title": "Driftwood Harbor",
+    "genre": "Simulation",
+    "tags": ["management", "boats", "economy"],
+    "description": "Harbor management simulator with logistics chains.",
+    "price": 26.99,
+    "discount": 18.0
+  },
+  {
+    "id": 15,
+    "title": "Relic Frontier",
+    "genre": "RPG",
+    "tags": ["exploration", "party", "story-rich"],
+    "description": "Story-rich RPG about relic hunting at the frontier.",
+    "price": 41.99,
+    "discount": 0.0
+  }
+]
