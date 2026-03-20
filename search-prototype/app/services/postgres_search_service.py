@@ -1,4 +1,4 @@
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 import psycopg2
 import psycopg2.extras
@@ -19,6 +19,7 @@ class PostgresSearchService(SearchServiceInterface):
     def ensure_schema(self) -> None:
         with self._connect() as conn:
             with conn.cursor() as cur:
+                cur.execute("CREATE EXTENSION IF NOT EXISTS pg_trgm;")
                 cur.execute(
                     """
                     CREATE TABLE IF NOT EXISTS games (
@@ -30,6 +31,34 @@ class PostgresSearchService(SearchServiceInterface):
                         price NUMERIC(10, 2) NOT NULL,
                         discount NUMERIC(5, 2) NOT NULL
                     );
+                    """
+                )
+
+                # Baseline indexes for exact filters.
+                cur.execute(
+                    """
+                    CREATE INDEX IF NOT EXISTS idx_games_genre_lower
+                    ON games (lower(genre));
+                    """
+                )
+                cur.execute(
+                    """
+                    CREATE INDEX IF NOT EXISTS idx_games_tags_gin
+                    ON games USING GIN (tags);
+                    """
+                )
+
+                # Trigram indexes accelerate LIKE/ILIKE style partial matching.
+                cur.execute(
+                    """
+                    CREATE INDEX IF NOT EXISTS idx_games_title_trgm
+                    ON games USING GIN (lower(title) gin_trgm_ops);
+                    """
+                )
+                cur.execute(
+                    """
+                    CREATE INDEX IF NOT EXISTS idx_games_description_trgm
+                    ON games USING GIN (lower(description) gin_trgm_ops);
                     """
                 )
             conn.commit()
@@ -60,13 +89,13 @@ class PostgresSearchService(SearchServiceInterface):
 
         if query.search_term:
             conditions.append(
-                "(title ILIKE %s OR description ILIKE %s OR EXISTS (SELECT 1 FROM unnest(tags) t WHERE t ILIKE %s))"
+                "(lower(title) LIKE %s OR lower(description) LIKE %s OR EXISTS (SELECT 1 FROM unnest(tags) t WHERE lower(t) LIKE %s))"
             )
-            pattern = f"%{query.search_term}%"
+            pattern = f"%{query.search_term.lower()}%"
             params.extend([pattern, pattern, pattern])
 
         if query.genre:
-            conditions.append("genre = %s")
+            conditions.append("lower(genre) = lower(%s)")
             params.append(query.genre)
 
         for item in query.filters:

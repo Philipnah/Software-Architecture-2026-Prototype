@@ -24,13 +24,44 @@ class ElasticSearchService(SearchServiceInterface):
 
         self._client.indices.create(
             index=self._index_name,
+            settings={
+                "analysis": {
+                    "normalizer": {
+                        "lowercase_normalizer": {
+                            "type": "custom",
+                            "filter": ["lowercase", "asciifolding"],
+                        }
+                    },
+                    "analyzer": {
+                        "game_text_analyzer": {
+                            "tokenizer": "standard",
+                            "filter": ["lowercase", "asciifolding"],
+                        }
+                    },
+                }
+            },
             mappings={
                 "properties": {
                     "id": {"type": "integer"},
-                    "title": {"type": "text"},
-                    "genre": {"type": "keyword"},
-                    "tags": {"type": "keyword"},
-                    "description": {"type": "text"},
+                    "title": {
+                        "type": "text",
+                        "analyzer": "game_text_analyzer",
+                        "fields": {
+                            "keyword": {"type": "keyword", "ignore_above": 256}
+                        },
+                    },
+                    "genre": {
+                        "type": "keyword",
+                        "normalizer": "lowercase_normalizer",
+                    },
+                    "tags": {
+                        "type": "keyword",
+                        "normalizer": "lowercase_normalizer",
+                    },
+                    "description": {
+                        "type": "text",
+                        "analyzer": "game_text_analyzer",
+                    },
                 }
             },
         )
@@ -76,14 +107,15 @@ class ElasticSearchService(SearchServiceInterface):
             )
 
         if query.genre:
-            filters.append({"term": {"genre": query.genre}})
+            filters.append({"term": {"genre": query.genre.lower().strip()}})
 
         for item in query.filters:
-            filters.append({"term": {"tags": item}})
+            filters.append({"term": {"tags": item.lower().strip()}})
 
         response = self._client.search(
             index=self._index_name,
             size=limit,
+            _source=["id", "title", "genre", "tags", "description"],
             query={
                 "bool": {
                     "must": must if must else [{"match_all": {}}],
