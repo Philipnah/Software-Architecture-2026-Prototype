@@ -6,6 +6,11 @@ Minimal prototype for benchmarking game metadata search with two backends:
 - Elasticsearch search
 - Elasticsearch search with optional PostgreSQL enrichment (pricing/discount)
 
+Data source:
+
+- `data/steam.csv` is used as the seed dataset for both PostgreSQL and Elasticsearch.
+- This steam dataset does not provide pricing/discount columns in the current file, so those fields are defaulted to `0.0` during seeding.
+
 The prototype demonstrates:
 
 - Builder pattern: query construction with a consistent API (`set_search_term`, `set_genre`, `set_filters`, `build_query`)

@@ -1,4 +1,4 @@
-import json
+import csv
 import os
 import time
 from pathlib import Path
@@ -47,6 +47,61 @@ def _wait_for_elasticsearch(host: str, retries: int = 30) -> None:
         time.sleep(1)
 
 
+def _parse_float(value: str, default: float = 0.0) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def _parse_tags(genre_value: str) -> List[str]:
+    if not genre_value:
+        return ["unknown"]
+    parts = [part.strip().lower() for part in genre_value.split(",") if part.strip()]
+    return parts if parts else ["unknown"]
+
+
+def _load_games_from_steam_csv(csv_path: Path) -> List[dict]:
+    if not csv_path.exists():
+        raise FileNotFoundError(f"Steam CSV file was not found at {csv_path}")
+
+    games: List[dict] = []
+    seen_ids = set()
+
+    with open(csv_path, "r", encoding="utf-8-sig", newline="") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            steam_id_raw = (row.get("steam_id") or "").strip()
+            if not steam_id_raw.isdigit():
+                continue
+
+            game_id = int(steam_id_raw)
+            if game_id in seen_ids:
+                continue
+            seen_ids.add(game_id)
+
+            genre = (row.get("genre") or "").strip() or "Unknown"
+            description = (row.get("description") or "").strip() or "No description provided"
+
+            games.append(
+                {
+                    "id": game_id,
+                    "title": (row.get("title") or "").strip() or f"Game {game_id}",
+                    "genre": genre,
+                    "tags": _parse_tags(genre),
+                    "description": description,
+                    # steam.csv in this dataset does not include pricing fields.
+                    "price": _parse_float(row.get("price"), default=0.0),
+                    "discount": _parse_float(row.get("discount"), default=0.0),
+                }
+            )
+
+    if not games:
+        raise RuntimeError("No valid game records could be parsed from steam.csv")
+
+    return games
+
+
 app = FastAPI(title="Search Service Prototype")
 
 postgres_service: PostgresSearchService
@@ -70,14 +125,13 @@ def startup_event() -> None:
     elasticsearch_service = ElasticSearchService(es_host, es_index, postgres_service)
     elasticsearch_service.ensure_index()
 
-    data_path = Path(__file__).resolve().parent.parent / "data" / "games.json"
-    with open(data_path, "r", encoding="utf-8") as f:
-        games = json.load(f)
+    data_path = Path(__file__).resolve().parent.parent / "data" / "steam.csv"
+    games = _load_games_from_steam_csv(data_path)
 
     postgres_service.seed_games(games)
     elasticsearch_service.seed_games(games)
 
-    print("[BOOT] Search prototype ready with seeded sample data")
+    print(f"[BOOT] Search prototype ready with steam.csv data ({len(games)} records)")
 
 
 @app.get("/health")
