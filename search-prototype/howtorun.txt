@@ -1,0 +1,25 @@
+Use this exact flow from your search-prototype folder:
+
+Start fresh
+docker compose down -v
+docker compose up --build -d
+
+Wait until API is ready
+curl http://localhost:8000/health
+
+If that fails, wait a few seconds and retry until you get:
+{"status":"ok"}
+
+Run quick functional checks
+curl "http://localhost:8000/search?engine=postgres&q=Tentacle&limit=3"
+curl "http://localhost:8000/search?engine=elasticsearch&q=Tentacle&limit=3"
+curl "http://localhost:8000/search?engine=elasticsearch_enriched&q=Tentacle&limit=3"
+
+Run benchmark loops
+for i in {1..50}; do curl -s "http://localhost:8000/search?engine=postgres&q=Tentacle&limit=10" > /dev/null; done
+for i in {1..50}; do curl -s "http://localhost:8000/search?engine=elasticsearch&q=Tentacle&limit=10" > /dev/null; done
+for i in {1..50}; do curl -s "http://localhost:8000/search?engine=elasticsearch_enriched&q=Tentacle&limit=10" > /dev/null; done
+
+Read timing output
+docker compose logs -f api
+
