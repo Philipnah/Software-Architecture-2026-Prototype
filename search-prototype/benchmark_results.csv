@@ -1,0 +1,40 @@
+Test case: q='' genre=''
+Number of requests;postgres;elasticsearch;elasticsearch_enriched
+1;17,2;2,4;5,1
+5;20,6;8,5;24,5
+10;40,3;16,0;47,9
+25;99,7;37,5;119,3
+50;203,2;72,9;240,3
+100;378,7;131,4;435,4
+500;1890,5;655,7;2186,1
+
+Test case: q='zelda' genre=''
+Number of requests;postgres;elasticsearch;elasticsearch_enriched
+1;31,0;3,2;5,9
+5;157,6;11,5;26,9
+10;317,0;21,3;52,8
+25;793,9;52,9;132,6
+50;1602,2;99,4;262,4
+100;3179,0;200,6;524,9
+500;15879,6;978,0;2627,7
+
+Test case: q='' genre='RPG'
+Number of requests;postgres;elasticsearch;elasticsearch_enriched
+1;4,8;2,8;5,7
+5;22,1;8,3;22,5
+10;45,1;17,5;44,6
+25;102,7;34,7;115,5
+50;204,9;70,1;226,6
+100;417,4;139,9;484,0
+500;2070,5;681,0;2293,4
+
+Test case: q='mario' genre='platformer'
+Number of requests;postgres;elasticsearch;elasticsearch_enriched
+1;4,9;2,6;4,3
+5;25,8;12,3;9,9
+10;43,3;19,8;18,6
+25;108,5;51,7;45,8
+50;218,7;91,5;91,6
+100;425,2;181,7;181,0
+500;2154,2;910,2;922,0
+

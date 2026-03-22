@@ -1,0 +1,844 @@
+Benchmark run: 2026-03-22 09:55:03
+Runs per case: 5
+============================================================
+
+Test case: q='' genre='' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    7.4ms  min=    4.0ms  max=   20.7ms  (5/5 ok)
+  elasticsearch                avg=    9.8ms  min=    4.5ms  max=   29.1ms  (5/5 ok)
+  elasticsearch_enriched       avg=    7.3ms  min=    6.7ms  max=    8.4ms  (5/5 ok)
+
+Test case: q='zelda' genre='' filters=[]
+------------------------------------------------------------
+  postgres                     avg=   36.7ms  min=   36.4ms  max=   37.4ms  (5/5 ok)
+  elasticsearch                avg=   12.0ms  min=    6.5ms  max=   28.9ms  (5/5 ok)
+  elasticsearch_enriched       avg=   11.3ms  min=   10.8ms  max=   11.5ms  (5/5 ok)
+
+Test case: q='' genre='RPG' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.6ms  min=    4.3ms  max=    5.2ms  (5/5 ok)
+  elasticsearch                avg=    4.6ms  min=    3.5ms  max=    8.5ms  (5/5 ok)
+  elasticsearch_enriched       avg=    7.1ms  min=    6.6ms  max=    7.8ms  (5/5 ok)
+
+Test case: q='mario' genre='platformer' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.4ms  min=    4.3ms  max=    4.7ms  (5/5 ok)
+  elasticsearch                avg=    7.4ms  min=    6.6ms  max=    7.7ms  (5/5 ok)
+  elasticsearch_enriched       avg=    6.1ms  min=    4.5ms  max=    7.4ms  (5/5 ok)
+
+============================================================
+Benchmark run: 2026-03-22 09:55:55
+Runs per case: 50
+============================================================
+
+Test case: q='' genre='' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.2ms  min=    3.7ms  max=   17.2ms  (50/50 ok)
+  elasticsearch                avg=    2.5ms  min=    2.1ms  max=    4.2ms  (50/50 ok)
+  elasticsearch_enriched       avg=    6.1ms  min=    5.4ms  max=    9.1ms  (50/50 ok)
+
+Test case: q='zelda' genre='' filters=[]
+------------------------------------------------------------
+  postgres                     avg=   31.3ms  min=   29.5ms  max=   38.7ms  (50/50 ok)
+  elasticsearch                avg=    3.5ms  min=    3.0ms  max=    6.6ms  (50/50 ok)
+  elasticsearch_enriched       avg=    6.8ms  min=    6.1ms  max=    8.0ms  (50/50 ok)
+
+Test case: q='' genre='RPG' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.0ms  min=    3.7ms  max=    4.3ms  (50/50 ok)
+  elasticsearch                avg=    2.8ms  min=    1.8ms  max=   17.1ms  (50/50 ok)
+  elasticsearch_enriched       avg=    5.4ms  min=    4.8ms  max=    7.0ms  (50/50 ok)
+
+Test case: q='mario' genre='platformer' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.1ms  min=    3.7ms  max=    5.0ms  (50/50 ok)
+  elasticsearch                avg=    3.2ms  min=    2.5ms  max=    4.5ms  (50/50 ok)
+  elasticsearch_enriched       avg=    2.6ms  min=    2.2ms  max=    3.6ms  (50/50 ok)
+
+============================================================
+Benchmark run: 2026-03-22 09:58:41
+Runs per case: 5
+============================================================
+
+q='' genre='' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    6.9ms  min=    4.0ms  max=   17.1ms  (5/5 ok)
+  elasticsearch                avg=    2.4ms  min=    1.9ms  max=    3.7ms  (5/5 ok)
+  elasticsearch_enriched       avg=    5.9ms  min=    5.7ms  max=    6.2ms  (5/5 ok)
+
+q='zelda' genre='' filters=[]
+------------------------------------------------------------
+  postgres                     avg=   37.7ms  min=   37.4ms  max=   38.5ms  (5/5 ok)
+  elasticsearch                avg=    3.4ms  min=    2.7ms  max=    4.7ms  (5/5 ok)
+  elasticsearch_enriched       avg=    6.9ms  min=    6.3ms  max=    7.2ms  (5/5 ok)
+
+q='' genre='RPG' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.5ms  min=    4.3ms  max=    4.8ms  (5/5 ok)
+  elasticsearch                avg=    2.5ms  min=    2.1ms  max=    3.6ms  (5/5 ok)
+  elasticsearch_enriched       avg=    6.3ms  min=    5.7ms  max=    6.9ms  (5/5 ok)
+
+q='mario' genre='platformer' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.7ms  min=    4.4ms  max=    4.8ms  (5/5 ok)
+  elasticsearch                avg=    3.1ms  min=    2.7ms  max=    4.0ms  (5/5 ok)
+  elasticsearch_enriched       avg=    2.8ms  min=    2.7ms  max=    3.2ms  (5/5 ok)
+
+============================================================
+Benchmark run: 2026-03-22 09:58:51
+Runs per case: 20
+============================================================
+
+q='' genre='' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.7ms  min=    3.8ms  max=   17.8ms  (20/20 ok)
+  elasticsearch                avg=    2.1ms  min=    1.9ms  max=    3.3ms  (20/20 ok)
+  elasticsearch_enriched       avg=    6.0ms  min=    5.4ms  max=    8.4ms  (20/20 ok)
+
+q='zelda' genre='' filters=[]
+------------------------------------------------------------
+  postgres                     avg=   35.4ms  min=   31.4ms  max=   38.1ms  (20/20 ok)
+  elasticsearch                avg=    2.9ms  min=    2.5ms  max=    4.3ms  (20/20 ok)
+  elasticsearch_enriched       avg=    6.9ms  min=    6.2ms  max=    7.3ms  (20/20 ok)
+
+q='' genre='RPG' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.4ms  min=    3.8ms  max=    5.0ms  (20/20 ok)
+  elasticsearch                avg=    2.1ms  min=    1.8ms  max=    3.4ms  (20/20 ok)
+  elasticsearch_enriched       avg=    5.6ms  min=    4.9ms  max=    6.1ms  (20/20 ok)
+
+q='mario' genre='platformer' filters=[]
+------------------------------------------------------------
+  postgres                     avg=    4.4ms  min=    4.1ms  max=    4.7ms  (20/20 ok)
+  elasticsearch                avg=    2.4ms  min=    2.2ms  max=    3.5ms  (20/20 ok)
+  elasticsearch_enriched       avg=    2.4ms  min=    2.0ms  max=    3.6ms  (20/20 ok)
+
+============================================================
+Benchmark run: 2026-03-22 10:01:14
+============================================================
+
+q='' genre=''
+------------------------------------------------------------
+    postgres                     avg=   17.0ms  total=17ms  (1/1 ok)
+    elasticsearch                avg=    3.3ms  total=3ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.7ms  total=6ms  (1/1 ok)
+    postgres                     avg=    4.0ms  total=20ms  (5/5 ok)
+    elasticsearch                avg=    2.0ms  total=10ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.3ms  total=27ms  (5/5 ok)
+    postgres                     avg=    3.9ms  total=39ms  (10/10 ok)
+    elasticsearch                avg=    1.8ms  total=18ms  (10/10 ok)
+    elasticsearch_enriched       avg=    5.3ms  total=53ms  (10/10 ok)
+    postgres                     avg=    3.9ms  total=98ms  (25/25 ok)
+    elasticsearch                avg=    1.9ms  total=48ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.3ms  total=133ms  (25/25 ok)
+    postgres                     avg=    3.9ms  total=194ms  (50/50 ok)
+    elasticsearch                avg=    1.8ms  total=89ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.2ms  total=258ms  (50/50 ok)
+    postgres                     avg=    3.6ms  total=363ms  (100/100 ok)
+    elasticsearch                avg=    1.6ms  total=161ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.6ms  total=462ms  (100/100 ok)
+
+q='zelda' genre=''
+------------------------------------------------------------
+    postgres                     avg=   30.4ms  total=30ms  (1/1 ok)
+    elasticsearch                avg=    3.6ms  total=4ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.7ms  total=6ms  (1/1 ok)
+    postgres                     avg=   30.8ms  total=154ms  (5/5 ok)
+    elasticsearch                avg=    2.6ms  total=13ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.5ms  total=28ms  (5/5 ok)
+    postgres                     avg=   30.8ms  total=308ms  (10/10 ok)
+    elasticsearch                avg=    2.5ms  total=25ms  (10/10 ok)
+    elasticsearch_enriched       avg=    5.7ms  total=57ms  (10/10 ok)
+    postgres                     avg=   30.4ms  total=759ms  (25/25 ok)
+    elasticsearch                avg=    2.3ms  total=59ms  (25/25 ok)
+    elasticsearch_enriched       avg=    6.6ms  total=164ms  (25/25 ok)
+    postgres                     avg=   30.6ms  total=1532ms  (50/50 ok)
+    elasticsearch                avg=    2.3ms  total=116ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.7ms  total=287ms  (50/50 ok)
+    postgres                     avg=   30.6ms  total=3063ms  (100/100 ok)
+    elasticsearch                avg=    2.4ms  total=245ms  (100/100 ok)
+    elasticsearch_enriched       avg=    5.7ms  total=565ms  (100/100 ok)
+
+q='' genre='RPG'
+------------------------------------------------------------
+    postgres                     avg=    4.3ms  total=4ms  (1/1 ok)
+    elasticsearch                avg=    2.3ms  total=2ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.1ms  total=5ms  (1/1 ok)
+    postgres                     avg=    4.3ms  total=21ms  (5/5 ok)
+    elasticsearch                avg=    1.8ms  total=9ms  (5/5 ok)
+    elasticsearch_enriched       avg=    4.8ms  total=24ms  (5/5 ok)
+    postgres                     avg=    4.1ms  total=41ms  (10/10 ok)
+    elasticsearch                avg=    1.7ms  total=17ms  (10/10 ok)
+    elasticsearch_enriched       avg=    4.7ms  total=47ms  (10/10 ok)
+    postgres                     avg=    4.0ms  total=100ms  (25/25 ok)
+    elasticsearch                avg=    1.5ms  total=39ms  (25/25 ok)
+    elasticsearch_enriched       avg=    4.7ms  total=118ms  (25/25 ok)
+    postgres                     avg=    4.1ms  total=203ms  (50/50 ok)
+    elasticsearch                avg=    1.6ms  total=81ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.0ms  total=251ms  (50/50 ok)
+    postgres                     avg=    4.0ms  total=405ms  (100/100 ok)
+    elasticsearch                avg=    1.6ms  total=159ms  (100/100 ok)
+    elasticsearch_enriched       avg=    5.0ms  total=501ms  (100/100 ok)
+
+q='mario' genre='platformer'
+------------------------------------------------------------
+    postgres                     avg=    4.8ms  total=5ms  (1/1 ok)
+    elasticsearch                avg=    3.5ms  total=3ms  (1/1 ok)
+    elasticsearch_enriched       avg=    2.8ms  total=3ms  (1/1 ok)
+    postgres                     avg=    4.8ms  total=24ms  (5/5 ok)
+    elasticsearch                avg=    2.6ms  total=13ms  (5/5 ok)
+    elasticsearch_enriched       avg=    2.2ms  total=11ms  (5/5 ok)
+    postgres                     avg=    4.4ms  total=44ms  (10/10 ok)
+    elasticsearch                avg=    2.3ms  total=23ms  (10/10 ok)
+    elasticsearch_enriched       avg=    2.1ms  total=21ms  (10/10 ok)
+    postgres                     avg=    4.3ms  total=107ms  (25/25 ok)
+    elasticsearch                avg=    2.1ms  total=53ms  (25/25 ok)
+    elasticsearch_enriched       avg=    2.0ms  total=51ms  (25/25 ok)
+    postgres                     avg=    4.2ms  total=209ms  (50/50 ok)
+    elasticsearch                avg=    2.0ms  total=102ms  (50/50 ok)
+    elasticsearch_enriched       avg=    2.1ms  total=107ms  (50/50 ok)
+    postgres                     avg=    4.1ms  total=415ms  (100/100 ok)
+    elasticsearch                avg=    2.0ms  total=203ms  (100/100 ok)
+    elasticsearch_enriched       avg=    2.0ms  total=204ms  (100/100 ok)
+
+============================================================
+Benchmark run: 2026-03-22 10:10:00
+============================================================
+
+q='' genre=''
+------------------------------------------------------------
+    postgres                     avg=   17.1ms  (1/1 ok)
+    elasticsearch                avg=    2.7ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.3ms  (1/1 ok)
+    postgres                     avg=    4.0ms  (5/5 ok)
+    elasticsearch                avg=    2.0ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.3ms  (5/5 ok)
+    postgres                     avg=    3.9ms  (10/10 ok)
+    elasticsearch                avg=    1.7ms  (10/10 ok)
+    elasticsearch_enriched       avg=    4.9ms  (10/10 ok)
+    postgres                     avg=    3.9ms  (25/25 ok)
+    elasticsearch                avg=    1.7ms  (25/25 ok)
+    elasticsearch_enriched       avg=    4.8ms  (25/25 ok)
+    postgres                     avg=    3.9ms  (50/50 ok)
+    elasticsearch                avg=    1.6ms  (50/50 ok)
+    elasticsearch_enriched       avg=    4.9ms  (50/50 ok)
+    postgres                     avg=    3.8ms  (100/100 ok)
+    elasticsearch                avg=    1.4ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.9ms  (100/100 ok)
+
+q='zelda' genre=''
+------------------------------------------------------------
+    postgres                     avg=   30.5ms  (1/1 ok)
+    elasticsearch                avg=    3.6ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.8ms  (1/1 ok)
+    postgres                     avg=   30.4ms  (5/5 ok)
+    elasticsearch                avg=    2.6ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.6ms  (5/5 ok)
+    postgres                     avg=   30.5ms  (10/10 ok)
+    elasticsearch                avg=    2.3ms  (10/10 ok)
+    elasticsearch_enriched       avg=    5.7ms  (10/10 ok)
+    postgres                     avg=   30.4ms  (25/25 ok)
+    elasticsearch                avg=    2.2ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.7ms  (25/25 ok)
+    postgres                     avg=   30.5ms  (50/50 ok)
+    elasticsearch                avg=    2.2ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.6ms  (50/50 ok)
+    postgres                     avg=   30.5ms  (100/100 ok)
+    elasticsearch                avg=    2.1ms  (100/100 ok)
+    elasticsearch_enriched       avg=    5.3ms  (100/100 ok)
+
+q='' genre='RPG'
+------------------------------------------------------------
+    postgres                     avg=    4.5ms  (1/1 ok)
+    elasticsearch                avg=    2.4ms  (1/1 ok)
+    elasticsearch_enriched       avg=    4.8ms  (1/1 ok)
+    postgres                     avg=    4.1ms  (5/5 ok)
+    elasticsearch                avg=    1.9ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.2ms  (5/5 ok)
+    postgres                     avg=    4.2ms  (10/10 ok)
+    elasticsearch                avg=    1.6ms  (10/10 ok)
+    elasticsearch_enriched       avg=    4.6ms  (10/10 ok)
+    postgres                     avg=    4.1ms  (25/25 ok)
+    elasticsearch                avg=    1.6ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.3ms  (25/25 ok)
+    postgres                     avg=    4.1ms  (50/50 ok)
+    elasticsearch                avg=    1.4ms  (50/50 ok)
+    elasticsearch_enriched       avg=    4.7ms  (50/50 ok)
+    postgres                     avg=    4.0ms  (100/100 ok)
+    elasticsearch                avg=    1.6ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.7ms  (100/100 ok)
+
+q='mario' genre='platformer'
+------------------------------------------------------------
+    postgres                     avg=    4.1ms  (1/1 ok)
+    elasticsearch                avg=    2.4ms  (1/1 ok)
+    elasticsearch_enriched       avg=    2.4ms  (1/1 ok)
+    postgres                     avg=    4.3ms  (5/5 ok)
+    elasticsearch                avg=    2.2ms  (5/5 ok)
+    elasticsearch_enriched       avg=    2.0ms  (5/5 ok)
+    postgres                     avg=    4.3ms  (10/10 ok)
+    elasticsearch                avg=    2.1ms  (10/10 ok)
+    elasticsearch_enriched       avg=    1.9ms  (10/10 ok)
+    postgres                     avg=    4.2ms  (25/25 ok)
+    elasticsearch                avg=    1.9ms  (25/25 ok)
+    elasticsearch_enriched       avg=    1.8ms  (25/25 ok)
+    postgres                     avg=    4.2ms  (50/50 ok)
+    elasticsearch                avg=    1.9ms  (50/50 ok)
+    elasticsearch_enriched       avg=    1.9ms  (50/50 ok)
+    postgres                     avg=    4.1ms  (100/100 ok)
+    elasticsearch                avg=    2.0ms  (100/100 ok)
+    elasticsearch_enriched       avg=    1.9ms  (100/100 ok)
+
+============================================================
+Benchmark run: 2026-03-22 10:18:10
+============================================================
+
+q='' genre=''
+------------------------------------------------------------
+    postgres                     avg=   17.0ms  (1/1 ok)
+    elasticsearch                avg=    2.6ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.4ms  (1/1 ok)
+    postgres                     avg=    4.2ms  (5/5 ok)
+    elasticsearch                avg=    1.8ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.1ms  (5/5 ok)
+    postgres                     avg=    4.0ms  (10/10 ok)
+    elasticsearch                avg=    1.9ms  (10/10 ok)
+    elasticsearch_enriched       avg=    5.1ms  (10/10 ok)
+    postgres                     avg=    4.2ms  (25/25 ok)
+    elasticsearch                avg=    1.6ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.4ms  (25/25 ok)
+    postgres                     avg=    4.0ms  (50/50 ok)
+    elasticsearch                avg=    1.6ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.2ms  (50/50 ok)
+    postgres                     avg=    3.8ms  (100/100 ok)
+    elasticsearch                avg=    1.4ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.7ms  (100/100 ok)
+
+q='zelda' genre=''
+------------------------------------------------------------
+    postgres                     avg=   32.4ms  (1/1 ok)
+    elasticsearch                avg=    3.3ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.8ms  (1/1 ok)
+    postgres                     avg=   31.8ms  (5/5 ok)
+    elasticsearch                avg=    2.6ms  (5/5 ok)
+    elasticsearch_enriched       avg=    6.3ms  (5/5 ok)
+    postgres                     avg=   32.0ms  (10/10 ok)
+    elasticsearch                avg=    2.3ms  (10/10 ok)
+    elasticsearch_enriched       avg=    5.9ms  (10/10 ok)
+    postgres                     avg=   31.8ms  (25/25 ok)
+    elasticsearch                avg=    3.1ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.7ms  (25/25 ok)
+    postgres                     avg=   31.9ms  (50/50 ok)
+    elasticsearch                avg=    2.1ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.7ms  (50/50 ok)
+    postgres                     avg=   31.6ms  (100/100 ok)
+    elasticsearch                avg=    2.2ms  (100/100 ok)
+    elasticsearch_enriched       avg=    5.6ms  (100/100 ok)
+
+q='' genre='RPG'
+------------------------------------------------------------
+    postgres                     avg=    4.4ms  (1/1 ok)
+    elasticsearch                avg=    2.3ms  (1/1 ok)
+    elasticsearch_enriched       avg=    4.7ms  (1/1 ok)
+    postgres                     avg=    4.4ms  (5/5 ok)
+    elasticsearch                avg=    1.7ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.0ms  (5/5 ok)
+    postgres                     avg=    4.3ms  (10/10 ok)
+    elasticsearch                avg=    1.6ms  (10/10 ok)
+    elasticsearch_enriched       avg=    4.8ms  (10/10 ok)
+    postgres                     avg=    4.2ms  (25/25 ok)
+    elasticsearch                avg=    1.5ms  (25/25 ok)
+    elasticsearch_enriched       avg=    4.7ms  (25/25 ok)
+    postgres                     avg=    4.2ms  (50/50 ok)
+    elasticsearch                avg=    1.5ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.0ms  (50/50 ok)
+    postgres                     avg=    4.3ms  (100/100 ok)
+    elasticsearch                avg=    1.5ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.9ms  (100/100 ok)
+
+q='mario' genre='platformer'
+------------------------------------------------------------
+    postgres                     avg=    4.4ms  (1/1 ok)
+    elasticsearch                avg=    2.9ms  (1/1 ok)
+    elasticsearch_enriched       avg=    2.5ms  (1/1 ok)
+    postgres                     avg=    4.8ms  (5/5 ok)
+    elasticsearch                avg=    2.3ms  (5/5 ok)
+    elasticsearch_enriched       avg=    2.0ms  (5/5 ok)
+    postgres                     avg=    4.5ms  (10/10 ok)
+    elasticsearch                avg=    2.1ms  (10/10 ok)
+    elasticsearch_enriched       avg=    2.0ms  (10/10 ok)
+    postgres                     avg=    4.3ms  (25/25 ok)
+    elasticsearch                avg=    2.1ms  (25/25 ok)
+    elasticsearch_enriched       avg=    2.0ms  (25/25 ok)
+    postgres                     avg=    4.3ms  (50/50 ok)
+    elasticsearch                avg=    2.0ms  (50/50 ok)
+    elasticsearch_enriched       avg=    2.0ms  (50/50 ok)
+    postgres                     avg=    4.3ms  (100/100 ok)
+    elasticsearch                avg=    2.1ms  (100/100 ok)
+    elasticsearch_enriched       avg=    2.0ms  (100/100 ok)
+
+============================================================
+Benchmark run: 2026-03-22 10:21:28
+============================================================
+
+q='' genre=''
+------------------------------------------------------------
+    postgres                     avg=   17.5ms  (1/1 ok)
+    elasticsearch                avg=    2.5ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.4ms  (1/1 ok)
+    postgres                     avg=    4.2ms  (5/5 ok)
+    elasticsearch                avg=    1.8ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.3ms  (5/5 ok)
+    postgres                     avg=    4.1ms  (10/10 ok)
+    elasticsearch                avg=    1.7ms  (10/10 ok)
+    elasticsearch_enriched       avg=    5.2ms  (10/10 ok)
+    postgres                     avg=    4.0ms  (25/25 ok)
+    elasticsearch                avg=    1.6ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.1ms  (25/25 ok)
+    postgres                     avg=    4.1ms  (50/50 ok)
+    elasticsearch                avg=    1.6ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.0ms  (50/50 ok)
+    postgres                     avg=    3.8ms  (100/100 ok)
+    elasticsearch                avg=    1.4ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.5ms  (100/100 ok)
+
+q='zelda' genre=''
+------------------------------------------------------------
+    postgres                     avg=   31.6ms  (1/1 ok)
+    elasticsearch                avg=    3.1ms  (1/1 ok)
+    elasticsearch_enriched       avg=    6.5ms  (1/1 ok)
+    postgres                     avg=   31.8ms  (5/5 ok)
+    elasticsearch                avg=    2.4ms  (5/5 ok)
+    elasticsearch_enriched       avg=    5.6ms  (5/5 ok)
+    postgres                     avg=   32.2ms  (10/10 ok)
+    elasticsearch                avg=    2.4ms  (10/10 ok)
+    elasticsearch_enriched       avg=    6.8ms  (10/10 ok)
+    postgres                     avg=   31.9ms  (25/25 ok)
+    elasticsearch                avg=    2.1ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.4ms  (25/25 ok)
+    postgres                     avg=   31.4ms  (50/50 ok)
+    elasticsearch                avg=    2.5ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.4ms  (50/50 ok)
+    postgres                     avg=   31.6ms  (100/100 ok)
+    elasticsearch                avg=    2.1ms  (100/100 ok)
+    elasticsearch_enriched       avg=    5.6ms  (100/100 ok)
+
+q='' genre='RPG'
+------------------------------------------------------------
+    postgres                     avg=    4.6ms  (1/1 ok)
+    elasticsearch                avg=    2.1ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.0ms  (1/1 ok)
+    postgres                     avg=    4.4ms  (5/5 ok)
+    elasticsearch                avg=    1.8ms  (5/5 ok)
+    elasticsearch_enriched       avg=    4.7ms  (5/5 ok)
+    postgres                     avg=    4.2ms  (10/10 ok)
+    elasticsearch                avg=    1.6ms  (10/10 ok)
+    elasticsearch_enriched       avg=    4.6ms  (10/10 ok)
+    postgres                     avg=    4.1ms  (25/25 ok)
+    elasticsearch                avg=    1.5ms  (25/25 ok)
+    elasticsearch_enriched       avg=    4.7ms  (25/25 ok)
+    postgres                     avg=    4.2ms  (50/50 ok)
+    elasticsearch                avg=    1.5ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.2ms  (50/50 ok)
+    postgres                     avg=    4.2ms  (100/100 ok)
+    elasticsearch                avg=    1.5ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.7ms  (100/100 ok)
+
+q='mario' genre='platformer'
+------------------------------------------------------------
+    postgres                     avg=    4.5ms  (1/1 ok)
+    elasticsearch                avg=    2.4ms  (1/1 ok)
+    elasticsearch_enriched       avg=    2.3ms  (1/1 ok)
+    postgres                     avg=    4.4ms  (5/5 ok)
+    elasticsearch                avg=    2.2ms  (5/5 ok)
+    elasticsearch_enriched       avg=    1.9ms  (5/5 ok)
+    postgres                     avg=    4.5ms  (10/10 ok)
+    elasticsearch                avg=    2.2ms  (10/10 ok)
+    elasticsearch_enriched       avg=    2.1ms  (10/10 ok)
+    postgres                     avg=    4.4ms  (25/25 ok)
+    elasticsearch                avg=    2.1ms  (25/25 ok)
+    elasticsearch_enriched       avg=    1.9ms  (25/25 ok)
+    postgres                     avg=    4.3ms  (50/50 ok)
+    elasticsearch                avg=    1.9ms  (50/50 ok)
+    elasticsearch_enriched       avg=    1.9ms  (50/50 ok)
+    postgres                     avg=    4.3ms  (100/100 ok)
+    elasticsearch                avg=    1.9ms  (100/100 ok)
+    elasticsearch_enriched       avg=    2.0ms  (100/100 ok)
+
+============================================================
+Benchmark run: 2026-03-22 10:25:13
+============================================================
+
+q='' genre=''
+------------------------------------------------------------
+    postgres                     avg=   17.3ms  (1/1 ok)
+    elasticsearch                avg=    2.4ms  (1/1 ok)
+    elasticsearch_enriched       avg=    5.2ms  (1/1 ok)
+    postgres                     avg=    4.0ms  (10/10 ok)
+    elasticsearch                avg=    1.7ms  (10/10 ok)
+    elasticsearch_enriched       avg=    5.0ms  (10/10 ok)
+    postgres                     avg=    4.1ms  (25/25 ok)
+    elasticsearch                avg=    1.6ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.0ms  (25/25 ok)
+    postgres                     avg=    4.0ms  (50/50 ok)
+    elasticsearch                avg=    1.6ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.0ms  (50/50 ok)
+    postgres                     avg=    3.8ms  (100/100 ok)
+    elasticsearch                avg=    1.3ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.6ms  (100/100 ok)
+    postgres                     avg=    3.8ms  (1000/1000 ok)
+    elasticsearch                avg=    1.4ms  (1000/1000 ok)
+    elasticsearch_enriched       avg=    4.5ms  (1000/1000 ok)
+
+q='zelda' genre=''
+------------------------------------------------------------
+    postgres                     avg=   31.6ms  (1/1 ok)
+    elasticsearch                avg=    3.2ms  (1/1 ok)
+    elasticsearch_enriched       avg=    6.0ms  (1/1 ok)
+    postgres                     avg=   32.0ms  (10/10 ok)
+    elasticsearch                avg=    2.1ms  (10/10 ok)
+    elasticsearch_enriched       avg=    5.5ms  (10/10 ok)
+    postgres                     avg=   31.9ms  (25/25 ok)
+    elasticsearch                avg=    2.1ms  (25/25 ok)
+    elasticsearch_enriched       avg=    5.3ms  (25/25 ok)
+    postgres                     avg=   31.8ms  (50/50 ok)
+    elasticsearch                avg=    2.1ms  (50/50 ok)
+    elasticsearch_enriched       avg=    5.4ms  (50/50 ok)
+    postgres                     avg=   31.9ms  (100/100 ok)
+    elasticsearch                avg=    2.0ms  (100/100 ok)
+    elasticsearch_enriched       avg=    5.4ms  (100/100 ok)
+    postgres                     avg=   31.7ms  (1000/1000 ok)
+    elasticsearch                avg=    2.0ms  (1000/1000 ok)
+    elasticsearch_enriched       avg=    5.3ms  (1000/1000 ok)
+
+q='' genre='RPG'
+------------------------------------------------------------
+    postgres                     avg=    4.2ms  (1/1 ok)
+    elasticsearch                avg=    2.2ms  (1/1 ok)
+    elasticsearch_enriched       avg=    4.8ms  (1/1 ok)
+    postgres                     avg=    4.2ms  (10/10 ok)
+    elasticsearch                avg=    1.5ms  (10/10 ok)
+    elasticsearch_enriched       avg=    4.4ms  (10/10 ok)
+    postgres                     avg=    4.1ms  (25/25 ok)
+    elasticsearch                avg=    1.4ms  (25/25 ok)
+    elasticsearch_enriched       avg=    4.5ms  (25/25 ok)
+    postgres                     avg=    4.1ms  (50/50 ok)
+    elasticsearch                avg=    1.4ms  (50/50 ok)
+    elasticsearch_enriched       avg=    4.7ms  (50/50 ok)
+    postgres                     avg=    4.1ms  (100/100 ok)
+    elasticsearch                avg=    1.4ms  (100/100 ok)
+    elasticsearch_enriched       avg=    4.5ms  (100/100 ok)
+    postgres                     avg=    4.2ms  (1000/1000 ok)
+    elasticsearch                avg=    1.4ms  (1000/1000 ok)
+    elasticsearch_enriched       avg=    4.5ms  (1000/1000 ok)
+
+q='mario' genre='platformer'
+------------------------------------------------------------
+    postgres                     avg=    4.5ms  (1/1 ok)
+    elasticsearch                avg=    2.7ms  (1/1 ok)
+    elasticsearch_enriched       avg=    2.1ms  (1/1 ok)
+    postgres                     avg=    4.3ms  (10/10 ok)
+    elasticsearch                avg=    1.9ms  (10/10 ok)
+    elasticsearch_enriched       avg=    1.8ms  (10/10 ok)
+    postgres                     avg=    4.4ms  (25/25 ok)
+    elasticsearch                avg=    1.9ms  (25/25 ok)
+    elasticsearch_enriched       avg=    1.9ms  (25/25 ok)
+    postgres                     avg=    4.3ms  (50/50 ok)
+    elasticsearch                avg=    1.9ms  (50/50 ok)
+    elasticsearch_enriched       avg=    1.8ms  (50/50 ok)
+    postgres                     avg=    4.2ms  (100/100 ok)
+    elasticsearch                avg=    1.8ms  (100/100 ok)
+    elasticsearch_enriched       avg=    1.8ms  (100/100 ok)
+    postgres                     avg=    4.6ms  (1000/1000 ok)
+    elasticsearch                avg=    1.9ms  (1000/1000 ok)
+    elasticsearch_enriched       avg=    1.9ms  (1000/1000 ok)
+
+============================================================
+Benchmark run: 2026-03-22 10:29:17
+============================================================
+
+q='' genre=''
+------------------------------------------------------------
+    postgres                     total=   17.6ms  (1/1 ok)
+    elasticsearch                total=    2.4ms  (1/1 ok)
+    elasticsearch_enriched       total=    5.2ms  (1/1 ok)
+    postgres                     total=   20.9ms  (5/5 ok)
+    elasticsearch                total=    8.3ms  (5/5 ok)
+    elasticsearch_enriched       total=   25.2ms  (5/5 ok)
+    postgres                     total=   42.0ms  (10/10 ok)
+    elasticsearch                total=   15.6ms  (10/10 ok)
+    elasticsearch_enriched       total=   49.4ms  (10/10 ok)
+    postgres                     total=  100.0ms  (25/25 ok)
+    elasticsearch                total=   37.7ms  (25/25 ok)
+    elasticsearch_enriched       total=  124.3ms  (25/25 ok)
+    postgres                     total=  203.9ms  (50/50 ok)
+    elasticsearch                total=   73.0ms  (50/50 ok)
+    elasticsearch_enriched       total=  239.3ms  (50/50 ok)
+    postgres                     total=  384.6ms  (100/100 ok)
+    elasticsearch                total=  129.8ms  (100/100 ok)
+    elasticsearch_enriched       total=  437.3ms  (100/100 ok)
+
+q='zelda' genre=''
+------------------------------------------------------------
+    postgres                     total=   31.8ms  (1/1 ok)
+    elasticsearch                total=    4.3ms  (1/1 ok)
+    elasticsearch_enriched       total=    6.4ms  (1/1 ok)
+    postgres                     total=  156.6ms  (5/5 ok)
+    elasticsearch                total=   14.0ms  (5/5 ok)
+    elasticsearch_enriched       total=   29.8ms  (5/5 ok)
+    postgres                     total=  314.7ms  (10/10 ok)
+    elasticsearch                total=   23.2ms  (10/10 ok)
+    elasticsearch_enriched       total=   58.6ms  (10/10 ok)
+    postgres                     total=  783.1ms  (25/25 ok)
+    elasticsearch                total=   52.0ms  (25/25 ok)
+    elasticsearch_enriched       total=  131.7ms  (25/25 ok)
+    postgres                     total= 1592.8ms  (50/50 ok)
+    elasticsearch                total=   97.9ms  (50/50 ok)
+    elasticsearch_enriched       total=  259.1ms  (50/50 ok)
+    postgres                     total= 3134.9ms  (100/100 ok)
+    elasticsearch                total=  198.1ms  (100/100 ok)
+    elasticsearch_enriched       total=  533.1ms  (100/100 ok)
+
+q='' genre='RPG'
+------------------------------------------------------------
+    postgres                     total=    4.3ms  (1/1 ok)
+    elasticsearch                total=    2.2ms  (1/1 ok)
+    elasticsearch_enriched       total=    5.1ms  (1/1 ok)
+    postgres                     total=   21.6ms  (5/5 ok)
+    elasticsearch                total=    8.2ms  (5/5 ok)
+    elasticsearch_enriched       total=   22.7ms  (5/5 ok)
+    postgres                     total=   39.8ms  (10/10 ok)
+    elasticsearch                total=   15.0ms  (10/10 ok)
+    elasticsearch_enriched       total=   45.2ms  (10/10 ok)
+    postgres                     total=  103.9ms  (25/25 ok)
+    elasticsearch                total=   35.7ms  (25/25 ok)
+    elasticsearch_enriched       total=  111.5ms  (25/25 ok)
+    postgres                     total=  204.7ms  (50/50 ok)
+    elasticsearch                total=   69.8ms  (50/50 ok)
+    elasticsearch_enriched       total=  222.3ms  (50/50 ok)
+    postgres                     total=  411.2ms  (100/100 ok)
+    elasticsearch                total=  136.0ms  (100/100 ok)
+    elasticsearch_enriched       total=  449.1ms  (100/100 ok)
+
+q='mario' genre='platformer'
+------------------------------------------------------------
+    postgres                     total=    4.2ms  (1/1 ok)
+    elasticsearch                total=    2.4ms  (1/1 ok)
+    elasticsearch_enriched       total=    1.9ms  (1/1 ok)
+    postgres                     total=   21.4ms  (5/5 ok)
+    elasticsearch                total=   10.4ms  (5/5 ok)
+    elasticsearch_enriched       total=    9.1ms  (5/5 ok)
+    postgres                     total=   43.4ms  (10/10 ok)
+    elasticsearch                total=   19.2ms  (10/10 ok)
+    elasticsearch_enriched       total=   17.9ms  (10/10 ok)
+    postgres                     total=  104.9ms  (25/25 ok)
+    elasticsearch                total=   45.2ms  (25/25 ok)
+    elasticsearch_enriched       total=   44.1ms  (25/25 ok)
+    postgres                     total=  213.7ms  (50/50 ok)
+    elasticsearch                total=  101.5ms  (50/50 ok)
+    elasticsearch_enriched       total=   92.7ms  (50/50 ok)
+    postgres                     total=  422.8ms  (100/100 ok)
+    elasticsearch                total=  180.2ms  (100/100 ok)
+    elasticsearch_enriched       total=  180.5ms  (100/100 ok)
+
+============================================================
+Benchmark run: 2026-03-22 10:30:50
+============================================================
+
+q='' genre=''
+------------------------------------------------------------
+    postgres                     total=   17.6ms  (1/1 ok)
+    elasticsearch                total=    2.4ms  (1/1 ok)
+    elasticsearch_enriched       total=    5.4ms  (1/1 ok)
+    postgres                     total=   20.6ms  (5/5 ok)
+    elasticsearch                total=    8.6ms  (5/5 ok)
+    elasticsearch_enriched       total=   24.4ms  (5/5 ok)
+    postgres                     total=   40.8ms  (10/10 ok)
+    elasticsearch                total=   15.1ms  (10/10 ok)
+    elasticsearch_enriched       total=   49.2ms  (10/10 ok)
+    postgres                     total=  101.4ms  (25/25 ok)
+    elasticsearch                total=   36.7ms  (25/25 ok)
+    elasticsearch_enriched       total=  119.2ms  (25/25 ok)
+    postgres                     total=  200.0ms  (50/50 ok)
+    elasticsearch                total=   76.5ms  (50/50 ok)
+    elasticsearch_enriched       total=  236.8ms  (50/50 ok)
+    postgres                     total=  384.8ms  (100/100 ok)
+    elasticsearch                total=  130.3ms  (100/100 ok)
+    elasticsearch_enriched       total=  443.8ms  (100/100 ok)
+    postgres                     total= 1899.8ms  (500/500 ok)
+    elasticsearch                total=  659.1ms  (500/500 ok)
+    elasticsearch_enriched       total= 2225.2ms  (500/500 ok)
+
+q='zelda' genre=''
+------------------------------------------------------------
+    postgres                     total=   31.8ms  (1/1 ok)
+    elasticsearch                total=    3.1ms  (1/1 ok)
+    elasticsearch_enriched       total=    5.6ms  (1/1 ok)
+    postgres                     total=  162.3ms  (5/5 ok)
+    elasticsearch                total=   11.8ms  (5/5 ok)
+    elasticsearch_enriched       total=   27.1ms  (5/5 ok)
+    postgres                     total=  320.5ms  (10/10 ok)
+    elasticsearch                total=   22.1ms  (10/10 ok)
+    elasticsearch_enriched       total=   52.7ms  (10/10 ok)
+    postgres                     total=  793.6ms  (25/25 ok)
+    elasticsearch                total=   50.9ms  (25/25 ok)
+    elasticsearch_enriched       total=  130.7ms  (25/25 ok)
+    postgres                     total= 1584.0ms  (50/50 ok)
+    elasticsearch                total=   98.6ms  (50/50 ok)
+    elasticsearch_enriched       total=  265.7ms  (50/50 ok)
+    postgres                     total= 3169.4ms  (100/100 ok)
+    elasticsearch                total=  201.0ms  (100/100 ok)
+    elasticsearch_enriched       total=  527.9ms  (100/100 ok)
+    postgres                     total=15909.7ms  (500/500 ok)
+    elasticsearch                total= 1021.3ms  (500/500 ok)
+    elasticsearch_enriched       total= 2735.7ms  (500/500 ok)
+
+q='' genre='RPG'
+------------------------------------------------------------
+    postgres                     total=    4.4ms  (1/1 ok)
+    elasticsearch                total=    2.0ms  (1/1 ok)
+    elasticsearch_enriched       total=    4.3ms  (1/1 ok)
+    postgres                     total=   20.4ms  (5/5 ok)
+    elasticsearch                total=    7.9ms  (5/5 ok)
+    elasticsearch_enriched       total=   22.6ms  (5/5 ok)
+    postgres                     total=   41.2ms  (10/10 ok)
+    elasticsearch                total=   14.7ms  (10/10 ok)
+    elasticsearch_enriched       total=   45.4ms  (10/10 ok)
+    postgres                     total=  104.7ms  (25/25 ok)
+    elasticsearch                total=   35.6ms  (25/25 ok)
+    elasticsearch_enriched       total=  110.7ms  (25/25 ok)
+    postgres                     total=  203.6ms  (50/50 ok)
+    elasticsearch                total=   69.7ms  (50/50 ok)
+    elasticsearch_enriched       total=  221.4ms  (50/50 ok)
+    postgres                     total=  408.4ms  (100/100 ok)
+    elasticsearch                total=  137.3ms  (100/100 ok)
+    elasticsearch_enriched       total=  465.9ms  (100/100 ok)
+    postgres                     total= 2086.0ms  (500/500 ok)
+    elasticsearch                total=  679.7ms  (500/500 ok)
+    elasticsearch_enriched       total= 2234.2ms  (500/500 ok)
+
+q='mario' genre='platformer'
+------------------------------------------------------------
+    postgres                     total=    4.6ms  (1/1 ok)
+    elasticsearch                total=    2.7ms  (1/1 ok)
+    elasticsearch_enriched       total=    1.9ms  (1/1 ok)
+    postgres                     total=   21.3ms  (5/5 ok)
+    elasticsearch                total=   10.1ms  (5/5 ok)
+    elasticsearch_enriched       total=    8.9ms  (5/5 ok)
+    postgres                     total=   42.8ms  (10/10 ok)
+    elasticsearch                total=   19.1ms  (10/10 ok)
+    elasticsearch_enriched       total=   17.4ms  (10/10 ok)
+    postgres                     total=  106.5ms  (25/25 ok)
+    elasticsearch                total=   46.7ms  (25/25 ok)
+    elasticsearch_enriched       total=   44.6ms  (25/25 ok)
+    postgres                     total=  213.2ms  (50/50 ok)
+    elasticsearch                total=   90.3ms  (50/50 ok)
+    elasticsearch_enriched       total=   86.5ms  (50/50 ok)
+    postgres                     total=  426.3ms  (100/100 ok)
+    elasticsearch                total=  183.9ms  (100/100 ok)
+    elasticsearch_enriched       total=  176.9ms  (100/100 ok)
+    postgres                     total= 2114.0ms  (500/500 ok)
+    elasticsearch                total=  896.6ms  (500/500 ok)
+    elasticsearch_enriched       total=  954.4ms  (500/500 ok)
+
+============================================================
+Benchmark run: 2026-03-22 10:38:03
+============================================================
+
+q='' genre=''
+------------------------------------------------------------
+    postgres                     total=   17.2ms  (1/1 ok)
+    elasticsearch                total=    2.4ms  (1/1 ok)
+    elasticsearch_enriched       total=    5.1ms  (1/1 ok)
+    postgres                     total=   20.6ms  (5/5 ok)
+    elasticsearch                total=    8.5ms  (5/5 ok)
+    elasticsearch_enriched       total=   24.5ms  (5/5 ok)
+    postgres                     total=   40.3ms  (10/10 ok)
+    elasticsearch                total=   16.0ms  (10/10 ok)
+    elasticsearch_enriched       total=   47.9ms  (10/10 ok)
+    postgres                     total=   99.7ms  (25/25 ok)
+    elasticsearch                total=   37.5ms  (25/25 ok)
+    elasticsearch_enriched       total=  119.3ms  (25/25 ok)
+    postgres                     total=  203.2ms  (50/50 ok)
+    elasticsearch                total=   72.9ms  (50/50 ok)
+    elasticsearch_enriched       total=  240.3ms  (50/50 ok)
+    postgres                     total=  378.7ms  (100/100 ok)
+    elasticsearch                total=  131.4ms  (100/100 ok)
+    elasticsearch_enriched       total=  435.4ms  (100/100 ok)
+    postgres                     total= 1890.5ms  (500/500 ok)
+    elasticsearch                total=  655.7ms  (500/500 ok)
+    elasticsearch_enriched       total= 2186.1ms  (500/500 ok)
+
+q='zelda' genre=''
+------------------------------------------------------------
+    postgres                     total=   31.0ms  (1/1 ok)
+    elasticsearch                total=    3.2ms  (1/1 ok)
+    elasticsearch_enriched       total=    5.9ms  (1/1 ok)
+    postgres                     total=  157.6ms  (5/5 ok)
+    elasticsearch                total=   11.5ms  (5/5 ok)
+    elasticsearch_enriched       total=   26.9ms  (5/5 ok)
+    postgres                     total=  317.0ms  (10/10 ok)
+    elasticsearch                total=   21.3ms  (10/10 ok)
+    elasticsearch_enriched       total=   52.8ms  (10/10 ok)
+    postgres                     total=  793.9ms  (25/25 ok)
+    elasticsearch                total=   52.9ms  (25/25 ok)
+    elasticsearch_enriched       total=  132.6ms  (25/25 ok)
+    postgres                     total= 1602.2ms  (50/50 ok)
+    elasticsearch                total=   99.4ms  (50/50 ok)
+    elasticsearch_enriched       total=  262.4ms  (50/50 ok)
+    postgres                     total= 3179.0ms  (100/100 ok)
+    elasticsearch                total=  200.6ms  (100/100 ok)
+    elasticsearch_enriched       total=  524.9ms  (100/100 ok)
+    postgres                     total=15879.6ms  (500/500 ok)
+    elasticsearch                total=  978.0ms  (500/500 ok)
+    elasticsearch_enriched       total= 2627.7ms  (500/500 ok)
+
+q='' genre='RPG'
+------------------------------------------------------------
+    postgres                     total=    4.8ms  (1/1 ok)
+    elasticsearch                total=    2.8ms  (1/1 ok)
+    elasticsearch_enriched       total=    5.7ms  (1/1 ok)
+    postgres                     total=   22.1ms  (5/5 ok)
+    elasticsearch                total=    8.3ms  (5/5 ok)
+    elasticsearch_enriched       total=   22.5ms  (5/5 ok)
+    postgres                     total=   45.1ms  (10/10 ok)
+    elasticsearch                total=   17.5ms  (10/10 ok)
+    elasticsearch_enriched       total=   44.6ms  (10/10 ok)
+    postgres                     total=  102.7ms  (25/25 ok)
+    elasticsearch                total=   34.7ms  (25/25 ok)
+    elasticsearch_enriched       total=  115.5ms  (25/25 ok)
+    postgres                     total=  204.9ms  (50/50 ok)
+    elasticsearch                total=   70.1ms  (50/50 ok)
+    elasticsearch_enriched       total=  226.6ms  (50/50 ok)
+    postgres                     total=  417.4ms  (100/100 ok)
+    elasticsearch                total=  139.9ms  (100/100 ok)
+    elasticsearch_enriched       total=  484.0ms  (100/100 ok)
+    postgres                     total= 2070.5ms  (500/500 ok)
+    elasticsearch                total=  681.0ms  (500/500 ok)
+    elasticsearch_enriched       total= 2293.4ms  (500/500 ok)
+
+q='mario' genre='platformer'
+------------------------------------------------------------
+    postgres                     total=    4.9ms  (1/1 ok)
+    elasticsearch                total=    2.6ms  (1/1 ok)
+    elasticsearch_enriched       total=    4.3ms  (1/1 ok)
+    postgres                     total=   25.8ms  (5/5 ok)
+    elasticsearch                total=   12.3ms  (5/5 ok)
+    elasticsearch_enriched       total=    9.9ms  (5/5 ok)
+    postgres                     total=   43.3ms  (10/10 ok)
+    elasticsearch                total=   19.8ms  (10/10 ok)
+    elasticsearch_enriched       total=   18.6ms  (10/10 ok)
+    postgres                     total=  108.5ms  (25/25 ok)
+    elasticsearch                total=   51.7ms  (25/25 ok)
+    elasticsearch_enriched       total=   45.8ms  (25/25 ok)
+    postgres                     total=  218.7ms  (50/50 ok)
+    elasticsearch                total=   91.5ms  (50/50 ok)
+    elasticsearch_enriched       total=   91.6ms  (50/50 ok)
+    postgres                     total=  425.2ms  (100/100 ok)
+    elasticsearch                total=  181.7ms  (100/100 ok)
+    elasticsearch_enriched       total=  181.0ms  (100/100 ok)
+    postgres                     total= 2154.2ms  (500/500 ok)
+    elasticsearch                total=  910.2ms  (500/500 ok)
+    elasticsearch_enriched       total=  922.0ms  (500/500 ok)
+
+============================================================
